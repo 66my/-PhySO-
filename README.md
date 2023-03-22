@@ -7,6 +7,9 @@ demo出自以下项目，再次对这位作者的贡献致意：https://github.c
 
 需要借助于Jupiter Lab或者Jupiter NoteBook打开，基于Python语言。（当然也可以在github直接打开）
 
+## 亮点
+使用Windows环境（Python3.10）完成了测试，而WassimTenachi仅完成了Linux与OSX（ARM和英特尔）的测试。
+
 
 ## physo基于以下论文
 https://arxiv.org/abs/2303.03192
