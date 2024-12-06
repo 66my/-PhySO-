@@ -1,4 +1,6 @@
 # -PhySO- 物理符号回归建模方法 —— 中文注释项目
+即将开展大型更新，mark 
+
 在demo_damped_harmonic_oscillator.ipynb文件中，有关于本模型使用原理的逐行注释，即使你是一个没有机器学习基础的科研人员，也基本可以看懂。
 
 demo出自以下项目，再次对这位作者的贡献致意：https://github.com/WassimTenachi/PhySO
