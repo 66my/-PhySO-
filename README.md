@@ -1,44 +1,61 @@
 # -PhySO- 物理符号回归建模方法 —— 中文注释项目
-即将开展大型更新，mark 
-
-在demo_damped_harmonic_oscillator.ipynb文件中，有关于本模型使用原理的逐行注释，即使你是一个没有机器学习基础的科研人员，也基本可以看懂。
-
-demo出自以下项目，再次对这位作者的贡献致意：https://github.com/WassimTenachi/PhySO
-
-同样的，如果想本地部署PhySO库，也请参照上述网址
-
-需要借助于Jupiter Lab或者Jupiter NoteBook打开，基于Python语言。（当然也可以在github直接打开）
-
-## 亮点
-使用Windows环境（Python3.10）完成了测试，而WassimTenachi仅完成了Linux与OSX（ARM和英特尔）的测试。
 
 
-## physo基于以下论文
-https://arxiv.org/abs/2303.03192
 
-未来会读一下相关文献，梳理一下原理
+本项目对 PhySO 开展完整的中文注释，从部署到精通，再到如何实际应用到自己所以学科，即使你是一个没有机器学习基础的科研人员，也基本可以看懂。让我们一起，推动 AI for Science 的进步。
 
-## demo中以下片段调用了PhySo相关功能，具有不可替代性
+## 一些官方资料
 
-#库的调用
+出自以下项目，随着时间推移作者已完整更新该算法，中文注释项目也迎来完整更新：https://github.com/WassimTenachi/PhySO
 
-monitoring；benchmark；physo；
+参考论文： https://arxiv.org/abs/2303.03192
 
-#奖励函数
-  #奖励函数是一个名为 SquashedNRMSE 的函数，它来自 physo.physym.reward 模块
-  
-                 "reward_function"     : physo.physym.reward.SquashedNRMSE,
-  #奖励相关的配置 Reward related
-  
-    'risk_factor'      : 0.05,
-    'rewards_computer' : physo.physym.reward.make_RewardsComputer (**reward_config),
+参考官方手册： [Welcome to PhySO’s documentation! — PhySO  documentation](https://physo.readthedocs.io/en/latest/)  
 
-#运行过程，拟合调用physo
-  #调用 physo.fit 方法进行拟合，得到奖励和候选答案
-  
-  rewards, candidates = physo.fit (X, y, run_config,
-                                stop_reward = 0.9999, 
-                                stop_after_n_epochs = 5)
-                                
-                                
+
+
+## 快速安装和使用
+
+注意： 由于 windows 系统的局限性，项目运行速度大幅度慢于 linux 系统，但如果计算量较小，可以忽略这个差异。
+
+仅介绍 windows （ Linux 环境下按照官方教程正常安装即可），推荐 python 3.8 ，不支持新版 torch ，`requirements.txt`文件`jupyterlab`，删除 `pytorch>=1.11.0` ，然后安装，命令行输入以下代码，注意路径部分修改：
+
+```bash
+conda activate physo
+S:\condaenv\physo\python.exe -m pip install --upgrade pip
+conda install pytorch
+cd PhySO
+conda install ipykernel
+conda install matplotlib
+conda install pandas tqdm scikit-learn
+pip3 install -r requirements.txt
+python -m pip install -e .
+conda install jupyterlab
+```
+
+测试（ 这里也推荐 VS Code ），也可以直接输入：
+
+```bash
+jupyter lab
+```
+
+[JupyterLab](http://localhost:8888/lab) 打开`class_sr_quick_start.ipynb`  ，实测 windows 下需要一个小时左右。
+
+或者
+
+```bash
+cd PhySO\demos
+python sr_quick_start.py
+```
+
+
+
+## 本项目文件构成
+
+PhySO 文件夹，2024年12月版本该项目内容。
+
+202303_version 文件夹，上一版项目内容加部分注释。
+
+
+
 

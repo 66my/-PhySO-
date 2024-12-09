@@ -1,0 +1,11 @@
+# Requirements for PhySO
+# Install via conda : conda install --file requirements.txt
+
+
+sympy
+numpy
+tqdm
+pandas
+scikit-learn
+ipykner
+
