@@ -54,6 +54,22 @@ PhySO 文件夹，2024年12月版本该项目内容。
 
 202303_version 文件夹，上一版项目内容加部分注释。
 
+### 已完成
+
+`-PhySO-\PhySO\demos\sr_quick_start.ipynb`，介绍了符号回归多自变量对单因变量的求解原理、概念与过程，调用 Pytorch ，建议在使用前对各变量数据进行归一化，数学原理上能够对各种物理量实现兼容，使用量纲分析（DA）提升符号回归的效果。
+
+    传统符号回归传统符号回归（Symbolic Regression, SR）是一种机器学习方法，旨在发现能够拟合给定数据集的数学表达式。它通常使用遗传算法或其他搜索策略来探索可能的数学表达式空间，以找到最佳的解析形式。
+
+
+
+`-PhySO-\PhySO\demos\class_sr_quick_start.ipynb`，符号回归类：
+
+    符号回归类（Class SR）是一种自动寻找单一解析函数形式的方法，该函数能够准确拟合多个数据集。每个数据集可能遵循其独特的拟合参数集。这种层次框架利用了同一类物理现象的所有成员都遵循相同的基本定律这一共同约束。
+
+
+
+注释中`-PhySO-\PhySO\demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_classical_gravity`
+
 ## 亮点
 
 Φ -SO 的符号回归模块使用深度强化学习来推断适合数据点的分析物理定律，在函数形式的空间中搜索。
@@ -69,9 +85,3 @@ PhySO 文件夹，2024年12月版本该项目内容。
 Φ -SO 在存在噪声（超过 0.1%）的情况下实现了最先进的性能，即使在存在大量 （10%） 噪声的情况下也表现出稳健的性能:
 
 ![bbb051a2-2737-40ca-bfbf-ed185c48aa71](https://github.com/WassimTenachi/PhySO/assets/63928316/bbb051a2-2737-40ca-bfbf-ed185c48aa71) 
-
-
-
-
-
-
