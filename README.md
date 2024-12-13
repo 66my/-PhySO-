@@ -56,19 +56,51 @@ PhySO 文件夹，2024年12月版本该项目内容。
 
 ### 已完成
 
+以下为翻译顺序，也是本项目作者非常推荐的源码学习路线图：
+
 `-PhySO-\PhySO\demos\sr_quick_start.ipynb`，介绍了符号回归多自变量对单因变量的求解原理、概念与过程，调用 Pytorch ，建议在使用前对各变量数据进行归一化，数学原理上能够对各种物理量实现兼容，使用量纲分析（DA）提升符号回归的效果。
 
     传统符号回归传统符号回归（Symbolic Regression, SR）是一种机器学习方法，旨在发现能够拟合给定数据集的数学表达式。它通常使用遗传算法或其他搜索策略来探索可能的数学表达式空间，以找到最佳的解析形式。
-
-
 
 `-PhySO-\PhySO\demos\class_sr_quick_start.ipynb`，符号回归类：
 
     符号回归类（Class SR）是一种自动寻找单一解析函数形式的方法，该函数能够准确拟合多个数据集。每个数据集可能遵循其独特的拟合参数集。这种层次框架利用了同一类物理现象的所有成员都遵循相同的基本定律这一共同约束。
 
+`-PhySO-\PhySO\demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_classical_gravity`完成。
+
+`-PhySO-\PhySO\benchmarking\readme_reproducibility.md`基准测试手册；
+
+demo文件夹其他文件注释完成。
 
 
-注释中`-PhySO-\PhySO\demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_classical_gravity`
+
+在`-PhySO-\PhySO\demos\sr\_deprecated-interface\demo_damped_harmonic_oscillator`具有更为详细的帕累托前沿研究，直接调用 physo 库绘制帕累托前沿图。
+
+## 可直接借鉴
+
+`-PhySO-\PhySO\demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_ideal_gas_law`演示理想气体状态方程求解过程。
+
+`-PhySO-\PhySO\demos\sr\_deprecated-interface\demo_damped_harmonic_oscillator\demo_damped_harmonic_oscillator.ipynb` 用于演示阻尼谐振子的求解过程。生成了一个阻尼谐振子的响应数据，并绘制了相应的图形。
+
+阻尼谐振子是一种常见的物理系统，其运动方程通常形式为：
+
+- \( $\ddot{x}$ \) 是位移的二阶导数（加速度）。
+- \( $\dot{x}$ \) 是位移的一阶导数（速度）。
+- \( $\alpha$ \) 是阻尼系数。
+- \( $\omega_0$ \) 是固有频率。
+  通过生成的时间点和响应数据，可以进一步分析和可视化阻尼谐振子的行为。
+
+`-PhySO-\PhySO\demos\sr\_deprecated-interface\demo_mechanical_energy\demo_mechanical_energy.ipynb` 预测分析机械能（势能和动能）变化。
+
+`-PhySO-\PhySO\demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_classical_gravity\demo_classical_gravity.ipynb`演示经典引力公式求解过程，模拟两个质点引力，验证牛顿万有引力公式。
+
+`demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_planck_law_nphotons\demo_planck_law_nphotons.ipynb`演示普朗克定律在计算光子数的应用，模拟黑体辐射的光子数分布。
+
+`demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_terminal_velocity\demo_terminal_velocity.py` 使用符号回归自动发现物体在流体中自由下落，重力与阻力平衡的速度。
+
+`demos\sr\_deprecated-interface\demos_natural_const_discovery\demo_wave_interferences\demo_wave_interferences.py` 发现波干涉物理公式。
+
+
 
 ## 亮点
 
